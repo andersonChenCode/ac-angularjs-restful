@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!-- ==================== Hiberate Session Factory ==================== -->
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean" lazy-init="true" >
+	
+		<property name="lobHandler"> 
+		   <ref bean="defaultLobHandler" /> 
+		</property> 
+
+		<property name="dataSource" ref="dataSource" />
+		
+          
+		<property name="mappingResources">
+			<list>            	
+            	<!-- LGT Common Tables -->
+            	<value>com/sap/model/bo/User.hbm.xml</value>
+            	
+			</list>
+			
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<!-- 
+            	
+            	-->
+            	 <prop key="hibernate.default_schema">${hibernate.default_schema}</prop>
+            	<prop key="hibernate.max_fetch_depth">${hibernate.max_fetch_depth}</prop>
+            	<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+            	<prop key="hibernate.default_batch_fetch_size">${hibernate.default_batch_fetch_size}</prop>
+            	<prop key="hibernate.bytecode.use_reflection_optimizer">${hibernate.bytecode.use_reflection_optimizer}</prop>
+            	<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+            	<!--  <prop key="hibernate.hbm2ddl.auto">CREATE</prop> -->
+                
+				<!-- =========== cache =========== -->            	
+            	<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+            	<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+
+				<!-- connection pool setting -->
+				<prop key="hibernate.c3p0.max_size">${hibernate.c3p0.maxPoolSize}</prop>
+				<prop key="hibernate.c3p0.min_size">${hibernate.c3p0.minPoolSize}</prop>
+				<prop key="hibernate.c3p0.timeout">1800</prop><!-- seconds --> 
+				<prop key="hibernate.c3p0.idle_test_period">300</prop><!-- seconds --> 				
+				<prop key="hibernate.c3p0.max_statements">${hibernate.c3p0.maxStatements}</prop>
+				<prop key="hibernate.c3p0.acquire_increment">${hibernate.c3p0.acquireIncrement}</prop>
+				<prop key="hibernate.c3p0.numHelperThreads">${hibernate.c3p0.numHelperThreads}</prop>
+				<prop key="hibernate.c3p0.autoCommitOnClose">${hibernate.c3p0.autoCommitOnClose}</prop>
+				
+				<!-- 
+				<prop key="hibernate.connection.provider_class">${hibernate.connection.provider_class}</prop>
+				<prop key="hibernate.proxool.pool_alias">${hibernate.proxool.pool_alias}</prop>
+				<prop key="hibernate.proxool.existing_pool">${hibernate.proxool.existing_pool}</prop>
+
+				<prop key="hibernate.dbcp.maxActive">${hibernate.dbcp.maxActive}</prop>
+				<prop key="hibernate.dbcp.whenExhaustedAction">${hibernate.dbcp.whenExhaustedAction}</prop>
+				<prop key="hibernate.dbcp.maxWait">${hibernate.dbcp.maxWait}</prop>
+				<prop key="hibernate.dbcp.maxIdle">${hibernate.dbcp.maxIdle}</prop>
+				<prop key="hibernate.dbcp.ps.maxActive">${hibernate.dbcp.ps.maxActive}</prop>
+				<prop key="hibernate.dbcp.ps.whenExhaustedAction">${hibernate.dbcp.ps.whenExhaustedAction}</prop>
+				<prop key="hibernate.dbcp.ps.maxWait">${hibernate.dbcp.ps.maxWait}</prop>
+				<prop key="hibernate.dbcp.ps.maxIdle">${hibernate.dbcp.ps.maxIdle}</prop>
+				 -->							
+			</props>
+		</property>
+		 
+		<!-- property name="configLocation"><value>classpath:hibernate.cfg.xml</value></property -->
+		<property name="schemaUpdate"><value>FALSE</value></property>
+			
+
+	</bean>
+
+</beans>

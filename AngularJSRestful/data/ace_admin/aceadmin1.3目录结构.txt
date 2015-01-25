@@ -1,0 +1,463 @@
+ACE_ADMIN1.3
+│  
+├─assets	资源存放目录
+│  ├─avatars	头像
+│  │      
+│  ├─css	css目录
+│  │  │  
+│  │  ├─images	图片目录
+│  │  │  │  
+│  │  │  └─ie6
+│  │  │          
+│  │  ├─img
+│  │  │      
+│  │  ├─less	less文件存放目录
+│  │  │  │  
+│  │  │  ├─bootstrap
+│  │  │  │      
+│  │  │  ├─dropdown
+│  │  │  │      
+│  │  │  ├─ext
+│  │  │  │      
+│  │  │  ├─form
+│  │  │  │      
+│  │  │  ├─navbar
+│  │  │  │      
+│  │  │  ├─sidebar
+│  │  │  │      
+│  │  │  └─skins
+│  │  │          
+│  │  └─uncompressed	未压缩的css
+│  │          
+│  ├─font 
+│  │      
+│  ├─fonts awesomefont 字体文件
+│  │      
+│  │      
+│  ├─images 图片
+│  │  │  
+│  │  └─gallery	相册
+│  │          
+│  ├─img
+│  │      
+│  └─js	js目录
+│      │  
+│      ├─ace
+│      │      
+│      ├─date-time
+│      │  │  
+│      │  └─locales
+│      │          
+│      ├─flot
+│      │      
+│      ├─fuelux
+│      │  │  
+│      │  └─data
+│      │          
+│      ├─jqGrid
+│      │  │  
+│      │  └─i18n
+│      │          
+│      ├─markdown
+│      │      
+│      ├─uncompressed 未压缩js目录
+│      │  │  
+│      │  ├─date-time
+│      │  │  │  
+│      │  │  └─locales
+│      │  ├─flot
+│      │  │      
+│      │  ├─fuelux
+│      │  │  │  
+│      │  │  └─data
+│      │  │          
+│      │  ├─jqGrid
+│      │  │      
+│      │  ├─markdown
+│      │  │      
+│      │  └─x-editable
+│      │          
+│      └─x-editable
+│              
+├─build
+│  │  
+│  ├─files
+│  │      
+│  └─lib
+│          
+├─docs	文档目录
+│  │  
+│  ├─assets
+│  │  └─js
+│  │      │  
+│  │      ├─language
+│  │      │      
+│  │      └─themes
+│  │              
+│  ├─images
+│  │      
+│  └─sections
+│      ├─basics
+│      │      
+│      ├─changes
+│      │      
+│      ├─credits
+│      │      
+│      ├─custom
+│      │      
+│      ├─elements
+│      │      
+│      ├─files
+│      │      
+│      ├─intro
+│      │      
+│      ├─issues
+│      │      
+│      ├─pages
+│      │      
+│      ├─plugins
+│      │      
+│      └─settings
+│              
+├─examples
+│  │  
+│  ├─data
+│  │      
+│  └─js
+│          
+├─html
+│      
+└─mustache 应该是js模板引擎mustache
+    ├─app
+    │  ├─data
+    │  │  │  
+    │  │  ├─common
+    │  │  │      
+    │  │  ├─layouts
+    │  │  │  │  
+    │  │  │  └─partials
+    │  │  │      ├─default
+    │  │  │      │      
+    │  │  │      └─empty
+    │  │  │              
+    │  │  └─pages
+    │  │      │  
+    │  │      └─partials
+    │  │          ├─form-elements
+    │  │          │      
+    │  │          ├─form-wizard
+    │  │          │      
+    │  │          ├─inbox
+    │  │          │      
+    │  │          ├─index
+    │  │          │      
+    │  │          ├─invoice
+    │  │          │      
+    │  │          ├─pricing
+    │  │          │      
+    │  │          ├─profile
+    │  │          │      
+    │  │          ├─tables
+    │  │          │      
+    │  │          └─widgets
+    │  │                  
+    │  └─views
+    │      ├─assets
+    │      │  │  
+    │      │  ├─scripts
+    │      │  │      
+    │      │  └─styles
+    │      │          
+    │      ├─layouts
+    │      │  │  
+    │      │  └─partials
+    │      │      ├─default
+    │      │      │  │  
+    │      │      │  └─navbar
+    │      │      │          
+    │      │      ├─empty
+    │      │      │  └─navbar
+    │      │      │          
+    │      │      ├─login
+    │      │      │  └─_template
+    │      │      │          
+    │      │      └─_shared
+    │      │          │  
+    │      │          ├─navbar
+    │      │          │      
+    │      │          ├─sidebar
+    │      │          │      
+    │      │          └─_template
+    │      │                  
+    │      └─pages
+    │          │  
+    │          └─partials
+    │              ├─faq
+    │              │      
+    │              ├─inbox
+    │              │      
+    │              ├─index
+    │              │      
+    │              ├─jquery-ui
+    │              │      
+    │              ├─login
+    │              │      
+    │              ├─pricing
+    │              │      
+    │              ├─profile
+    │              │      
+    │              ├─timeline
+    │              │      
+    │              ├─widgets
+    │              │      
+    │              └─_shared
+    ├─js
+    │  │  
+    │  ├─classes
+    │  │      
+    │  ├─node_modules
+    │  │  ├─.bin
+    │  │  │      
+    │  │  ├─argh
+    │  │  │  │  
+    │  │  │  ├─example
+    │  │  │  │      
+    │  │  │  └─test
+    │  │  │          
+    │  │  ├─hogan.js
+    │  │  │  │  
+    │  │  │  ├─bin
+    │  │  │  │      
+    │  │  │  ├─lib
+    │  │  │  │      
+    │  │  │  ├─test
+    │  │  │  │  │  
+    │  │  │  │  ├─html
+    │  │  │  │  │      
+    │  │  │  │  ├─spec
+    │  │  │  │  │  │  
+    │  │  │  │  │  └─specs
+    │  │  │  │  │          
+    │  │  │  │  └─templates
+    │  │  │  │          
+    │  │  │  ├─tools
+    │  │  │  │      
+    │  │  │  ├─web
+    │  │  │  │  │  
+    │  │  │  │  ├─1.0.0
+    │  │  │  │  │      
+    │  │  │  │  ├─builds
+    │  │  │  │  │  ├─1.0.0
+    │  │  │  │  │  │      
+    │  │  │  │  │  ├─1.0.3
+    │  │  │  │  │  │      
+    │  │  │  │  │  ├─1.0.4
+    │  │  │  │  │  │      
+    │  │  │  │  │  ├─1.0.5
+    │  │  │  │  │  │      
+    │  │  │  │  │  └─2.0.0
+    │  │  │  │  │          
+    │  │  │  │  ├─images
+    │  │  │  │  │      
+    │  │  │  │  └─stylesheets
+    │  │  │  │          
+    │  │  │  └─wrappers
+    │  │  │          
+    │  │  ├─htmlparser2
+    │  │  │  │  
+    │  │  │  ├─lib
+    │  │  │  │      
+    │  │  │  ├─node_modules
+    │  │  │  │  ├─domelementtype
+    │  │  │  │  │      
+    │  │  │  │  ├─domhandler
+    │  │  │  │  │  │  
+    │  │  │  │  │  └─tests
+    │  │  │  │  │          
+    │  │  │  │  ├─domutils
+    │  │  │  │  │  │  
+    │  │  │  │  │  └─tests
+    │  │  │  │  │      │  
+    │  │  │  │  │      └─DomUtils
+    │  │  │  │  │              
+    │  │  │  │  └─readable-stream
+    │  │  │  │      │  
+    │  │  │  │      ├─examples
+    │  │  │  │      │      
+    │  │  │  │      ├─lib
+    │  │  │  │      │      
+    │  │  │  │      └─test
+    │  │  │  │          │  common.js
+    │  │  │  │          │  
+    │  │  │  │          ├─fixtures
+    │  │  │  │          │      
+    │  │  │  │          └─simple
+    │  │  │  │                  
+    │  │  │  └─tests
+    │  │  │      │  
+    │  │  │      ├─Documents
+    │  │  │      │      
+    │  │  │      ├─Events
+    │  │  │      │      
+    │  │  │      ├─Feeds
+    │  │  │      │      
+    │  │  │      └─Stream
+    │  │  │              
+    │  │  ├─mustache
+    │  │  │  │  
+    │  │  │  ├─test
+    │  │  │  │  │  
+    │  │  │  │  └─_files
+    │  │  │  │          
+    │  │  │  └─wrappers
+    │  │  │      ├─dojo
+    │  │  │      │      
+    │  │  │      ├─jquery
+    │  │  │      │      
+    │  │  │      ├─mootools
+    │  │  │      │      
+    │  │  │      └─qooxdoo
+    │  │  │              
+    │  │  ├─require-csv
+    │  │  │  │  
+    │  │  │  ├─examples
+    │  │  │  │      
+    │  │  │  └─node_modules
+    │  │  │      └─csv2array
+    │  │  │              
+    │  │  ├─w3cjs
+    │  │  │  │  
+    │  │  │  ├─example
+    │  │  │  │      
+    │  │  │  ├─lib
+    │  │  │  │      
+    │  │  │  └─node_modules
+    │  │  │      ├─argparse
+    │  │  │      │  │  
+    │  │  │      │  ├─examples
+    │  │  │      │  │      
+    │  │  │      │  ├─lib
+    │  │  │      │  │  │  
+    │  │  │      │  │  ├─action
+    │  │  │      │  │  │  │  
+    │  │  │      │  │  │  ├─append
+    │  │  │      │  │  │  │      
+    │  │  │      │  │  │  └─store
+    │  │  │      │  │  │          
+    │  │  │      │  │  ├─argument
+    │  │  │      │  │  │      
+    │  │  │      │  │  └─help
+    │  │  │      │  │          
+    │  │  │      │  └─node_modules
+    │  │  │      │      ├─underscore
+    │  │  │      │      │      
+    │  │  │      │      └─underscore.string
+    │  │  │      │          │  
+    │  │  │      │          ├─dist
+    │  │  │      │          │      
+    │  │  │      │          ├─lib
+    │  │  │      │          │      
+    │  │  │      │          └─test
+    │  │  │      │              │  
+    │  │  │      │              └─test_underscore
+    │  │  │      │                  │  
+    │  │  │      │                  └─vendor
+    │  │  │      │                          
+    │  │  │      └─superagent
+    │  │  │          │  
+    │  │  │          ├─components
+    │  │  │          │  ├─component-emitter
+    │  │  │          │  │      
+    │  │  │          │  ├─component-indexof
+    │  │  │          │  │      
+    │  │  │          │  └─RedVentures-reduce
+    │  │  │          │          
+    │  │  │          ├─docs
+    │  │  │          │      
+    │  │  │          ├─lib
+    │  │  │          │  │  
+    │  │  │          │  └─node
+    │  │  │          │      │  
+    │  │  │          │      └─parsers
+    │  │  │          │              
+    │  │  │          └─node_modules
+    │  │  │              ├─cookiejar
+    │  │  │              │  │  
+    │  │  │              │  └─tests
+    │  │  │              │          
+    │  │  │              ├─debug
+    │  │  │              │  │  
+    │  │  │              │  ├─example
+    │  │  │              │  │      
+    │  │  │              │  └─lib
+    │  │  │              │          
+    │  │  │              ├─emitter-component
+    │  │  │              │  │  
+    │  │  │              │  └─test
+    │  │  │              │          
+    │  │  │              ├─formidable
+    │  │  │              │  │  
+    │  │  │              │  ├─benchmark
+    │  │  │              │  │      
+    │  │  │              │  ├─example
+    │  │  │              │  │      
+    │  │  │              │  ├─lib
+    │  │  │              │  │      
+    │  │  │              │  ├─test
+    │  │  │              │  │  │  
+    │  │  │              │  │  ├─fixture
+    │  │  │              │  │  │  │  
+    │  │  │              │  │  │  ├─file
+    │  │  │              │  │  │  │      
+    │  │  │              │  │  │  ├─http
+    │  │  │              │  │  │  │  └─special-chars-in-filename
+    │  │  │              │  │  │  │          
+    │  │  │              │  │  │  └─js
+    │  │  │              │  │  │          
+    │  │  │              │  │  ├─integration
+    │  │  │              │  │  │      
+    │  │  │              │  │  ├─legacy
+    │  │  │              │  │  │  │  
+    │  │  │              │  │  │  ├─integration
+    │  │  │              │  │  │  │      
+    │  │  │              │  │  │  ├─simple
+    │  │  │              │  │  │  │      
+    │  │  │              │  │  │  └─system
+    │  │  │              │  │  │          
+    │  │  │              │  │  ├─standalone
+    │  │  │              │  │  │      
+    │  │  │              │  │  ├─tools
+    │  │  │              │  │  │      
+    │  │  │              │  │  └─unit
+    │  │  │              │  │          
+    │  │  │              │  └─tool
+    │  │  │              │          
+    │  │  │              ├─methods
+    │  │  │              │      
+    │  │  │              ├─mime
+    │  │  │              │  │  
+    │  │  │              │  └─types
+    │  │  │              │          
+    │  │  │              └─qs
+    │  │  │                      
+    │  │  └─xtend
+    │  │      │  
+    │  │      ├─browser
+    │  │      │      
+    │  │      └─support
+    │  │              
+    │  └─output
+    └─php
+        │  
+        ├─classes
+        │      
+        ├─vendor
+        │  └─Mustache
+        │      │  
+        │      ├─Exception
+        │      │      
+        │      ├─Loader
+        │      │      
+        │      └─Logger
+        │              
+        └─_cache
