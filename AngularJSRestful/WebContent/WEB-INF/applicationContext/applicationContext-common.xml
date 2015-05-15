@@ -46,11 +46,6 @@
 	    <property name="proxyInterfaces">
 	        <value>org.springframework.orm.hibernate3.HibernateOperations</value>
 	    </property>
-	    <property name="interceptorNames">
-	        <list>
-	            <value>hibernateTemplateAuditPointcut</value>
-	        </list>
-	    </property>
 	    <property name="target">
 	        <ref bean="hibernateTemplateTarget"/>
 	    </property>
