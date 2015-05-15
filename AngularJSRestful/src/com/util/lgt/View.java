@@ -224,7 +224,8 @@ public class View {
     static public String getOption(String sql, String selectedOne) {
         StringBuilder sb = new StringBuilder().append("<option value=''>請選擇</option>");
         try {
-        	List list = PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
+        
+        	List list = null;//PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
         	if (list!=null && list.size()>0) {
         		for (int i=0; i<list.size(); i++) {
         			Object[] obj = (Object[])list.get(i);
@@ -254,7 +255,7 @@ public class View {
     static public String getOption(String sql, String[] selected) {
         StringBuilder sb = new StringBuilder().append("<option value=''>請選擇</option>");
         try {
-        	List list = PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
+        	List list = null;//PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
         	if (list!=null && list.size()>0) {
         		StringBuilder sb1 = new StringBuilder();
         		StringBuilder sb2 = new StringBuilder();
@@ -296,7 +297,7 @@ public class View {
         StringBuilder sb = new StringBuilder().append("<option value=''>請選擇</option>");
         HibernateOperations ht = PersistenceServiceGetter.getInstance().getHibernateTemplate();
         try {
-        	List list = ht.find(sql);
+        	List list = null;//ht.find(sql);
         	if (list!=null && list.size()>0) {
         		for (int i=0; i<list.size(); i++) {
                     String id = list.get(i).toString();
@@ -1103,7 +1104,7 @@ public class View {
 
     public static Object getObject(String sql) {
         try {
-        	List list = PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
+        	List list = null;//PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
         	if (list!=null && list.size()>0) {
         		return list.get(0);
         	}
@@ -1115,7 +1116,7 @@ public class View {
 
     public static Object[] getObjects(String sql) {
         try {
-        	List list = PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
+        	List list = null;//PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
         	if (list!=null && list.size()>0) {
         		return (Object[])list.get(0);
         	}
@@ -1127,7 +1128,7 @@ public class View {
 
     public static String getLookupField(String sql) {
         try {
-        	List list = PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
+        	List list = null;//PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql);
         	if (list!=null && list.size()>0) {
         		return Common.get(list.get(0));
         	}
@@ -1139,7 +1140,7 @@ public class View {
 
     public static String getLookupField(String sql, Object id) {
         try {
-        	List list = PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql,id);
+        	List list = null;//PersistenceServiceGetter.getInstance().getHibernateTemplate().find(sql,id);
         	if (list!=null && list.size()>0) {
         		return Common.get(list.get(0));
         	}
