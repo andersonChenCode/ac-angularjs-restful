@@ -23,6 +23,8 @@ public class MyDestinationDataProvider implements DestinationDataProvider {
 		properties.setProperty(DestinationDataProvider.JCO_PASSWD, system.getPassword());
 		properties.setProperty(DestinationDataProvider.JCO_SAPROUTER, system.getSAPRouterString());	
 		properties.setProperty(DestinationDataProvider.JCO_LANG, system.getLanguage());	
+		properties.setProperty(DestinationDataProvider.JCO_CODEPAGE, "8400");	
+		
 		ABAP_AS_properties = properties;
 	}
 	
