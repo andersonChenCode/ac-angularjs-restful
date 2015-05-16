@@ -3,16 +3,8 @@ package com.sap.model.service;
 import java.util.Collection;
 import java.util.List;
 
-import com.sap.model.bo.User;
-
 
  
-
-/**
- * User Service 接口
- * @author waylau.com
- * 2014-7-25
- */
 public interface UserService {
 	
 	//=base=============================================================================
