@@ -8,6 +8,13 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+
+	<bean id="serviceGetter" class="com.sap.model.ServiceGetter" >
+		<property name="UserService">
+			<ref bean="UserService" />
+		</property>			
+	</bean>	
+
     
 	<bean id="UserService" class="com.sap.model.service.impl.UserServiceImpl">
 		<property name="hibernateTemplate">

@@ -56,6 +56,8 @@ public class TodoDao {
 		target.setOwner(todo.getOwner());
 		target.setPriority(todo.getPriority());
 		
+		System.out.println(" com.sap.model.ServiceGetter.getInstance() is " + com.sap.model.ServiceGetter.getInstance());
+		
 		com.sap.model.service.UserService UserService = com.sap.model.ServiceGetter.getInstance().getUserService();
 		int rowCount = UserService.getObjectQty("from User");
 		System.out.println("UserService >> " + rowCount);
