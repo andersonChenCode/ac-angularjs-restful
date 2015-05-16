@@ -7,6 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
+import com.sap.conn.Connection;
+import com.sap.conn.SapSystem;
+import com.sap.conn.SapUtilities;
+import com.sap.conn.jco.JCoException;
+import com.sap.conn.jco.JCoFunction;
+import com.sap.conn.jco.JCoTable;
+
 import todo.model.Todo;
 
 /**
@@ -56,16 +64,47 @@ public class TodoDao {
 		target.setOwner(todo.getOwner());
 		target.setPriority(todo.getPriority());
 		
-		System.out.println(" com.sap.model.ServiceGetter.getInstance() is " + com.sap.model.ServiceGetter.getInstance());
+		SapSystem sapSystem = SapUtilities.getDefTestSystem();
+    	Object[] obj = SapUtilities.getJCoFunction(sapSystem,"BAPI_COMPANYCODE_GETLIST");
+    	Connection connect = (Connection)obj[0];
+    	JCoFunction function = (JCoFunction)obj[1];
+    	
+    	JCoTable returnStructure = function.getTableParameterList().getTable("COMPANYCODE_LIST"); 
+    	
+		try {
+			connect.executeNTX(function);
+		} catch (JCoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		com.sap.model.service.UserService UserService = com.sap.model.ServiceGetter.getInstance().getUserService();
-		int rowCount = UserService.getObjectQty("from User");
-		System.out.println("UserService >> " + rowCount);
-		List objList = UserService.getObjectResultList("from User",1,10);
-	    for (int i=0; i < objList.size(); i++) {
-			 com.sap.model.bo.User obj = (com.sap.model.bo.User) objList.get(i);
-		     System.out.println(obj.getUserId() + "  " + obj.getUserName());
-	    }	
+
+
+	    for (int i = 0; i < returnStructure.getNumRows(); i++){ 
+	    	 returnStructure.setRow(i); 
+	    	 String COMP_CODE = returnStructure.getString("COMP_CODE");
+	    	 String COMP_NAME = returnStructure.getString("COMP_NAME");
+	    	 
+	 		 com.sap.model.bo.User user =new com.sap.model.bo.User();
+		 	 user.setUserName(COMP_CODE);
+			 user.setAge(COMP_NAME);
+			 
+	    	 if (COMP_CODE.equals("TW01")) UserService.saveObject(user);
+	    	 if (COMP_CODE.equals("CN01")) UserService.saveObject(user);
+	    	 if (COMP_CODE.equals("CN02")) UserService.saveObject(user);
+	    	 if (COMP_CODE.equals("CN03")) UserService.saveObject(user);
+	    	 if (COMP_CODE.equals("CN04")) UserService.saveObject(user);
+	    	 
+	    }
+		//int rowCount = UserService.getObjectQty("from User");
+		//System.out.println("UserService >> " + rowCount);
+		//List objList = UserService.getObjectResultList("from User",1,10);
+	    // for (int i=0; i < objList.size(); i++) {
+		//	 com.sap.model.bo.User obj = (com.sap.model.bo.User) objList.get(i);
+		//     System.out.println(obj.getUserId() + "  " + obj.getUserName());
+	    //}	
 		
 	}
 

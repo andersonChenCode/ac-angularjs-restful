@@ -1,29 +1,25 @@
 package com.sap.model.bo;
 
 import javax.xml.bind.annotation.XmlRootElement;  
-/* *
- * 用户 bean 
- * @author waylau.com
- * 2014-7-24
- */
+
 @XmlRootElement  
 public class User {  
 
-    private String userId;  
+    private Integer userId;  
     private String userName;  
     private String age;  
 
     public User() {};  
 
-    public User(String userId, String userName, String age) {  
+    public User(Integer userId, String userName, String age) {  
         this.userId = userId;  
         this.userName = userName;  
         this.age = age;  
     }  
-    public String getUserId() {  
+    public Integer getUserId() {  
         return userId;  
     }  
-    public void setUserId(String userId) {  
+    public void setUserId(Integer userId) {  
         this.userId = userId;  
     }  
     public String getUserName() {  

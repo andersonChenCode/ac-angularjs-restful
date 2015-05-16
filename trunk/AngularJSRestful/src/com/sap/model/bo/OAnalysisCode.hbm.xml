@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+<!--
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class
+    name="com.sap.model.bo.OAnalysisCode"
+    table="ANALYSISCOD"
+>
+
+    <id
+        name="id"
+        type="java.lang.Integer"
+        column="id"
+    >
+    
+        <generator class="native" />
+    </id>
+
+    <property
+        name="name"
+        type="java.lang.String"
+        column="NAME"
+        length="254"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="code"
+        type="java.lang.String"
+        column="CODE"
+        length="254"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <property
+        name="analysisgroupname"
+        type="java.lang.String"
+        column="ANALYSISGROUPNAME"
+        length="254"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="dproperties"
+        type="byte[]"
+        column="DPROPERTIES"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+
+    <property
+        name="codeDesc"
+        type="java.lang.String"
+        column="code_desc"
+        length="300"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="editId"
+        type="java.lang.String"
+        column="editId"
+        length="20"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="editDate"
+        type="java.lang.String"
+        column="editDate"
+        length="7"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    <property
+        name="editTime"
+        type="java.lang.String"
+        column="editTime"
+        length="6"
+    >
+        <meta attribute="use-in-tostring">true</meta>
+    </property>
+    
+    <!-- Associations -->
+
+
+</class>
+</hibernate-mapping>
