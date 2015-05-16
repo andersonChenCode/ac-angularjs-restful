@@ -21,7 +21,6 @@
 		<property name="maxStatements" value="${hibernate.c3p0.maxStatements}" />
 		<property name="numHelperThreads" value="${hibernate.c3p0.numHelperThreads}" />
 		<property name="autoCommitOnClose" value="${hibernate.c3p0.autoCommitOnClose}" />
-		
 	</bean>
 
 
