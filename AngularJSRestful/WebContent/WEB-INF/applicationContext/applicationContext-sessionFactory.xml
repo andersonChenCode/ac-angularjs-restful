@@ -21,9 +21,7 @@
           
 		<property name="mappingResources">
 			<list>            	
-            	<!-- LGT Common Tables -->
             	<value>com/sap/model/bo/User.hbm.xml</value>
-            	
 			</list>
 			
 		</property>

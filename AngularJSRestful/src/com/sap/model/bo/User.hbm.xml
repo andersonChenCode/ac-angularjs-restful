@@ -6,7 +6,6 @@
  
 <hibernate-mapping package="com.sap.model.bo">
 
-<!--     <class name="User" table="T_USER" schema="RestDemo.dbo">    -->
      <class name="User" table="T_USER" >   
         <id name="userId" column="USERID"  type="string" >
             <generator class="assigned"/>
