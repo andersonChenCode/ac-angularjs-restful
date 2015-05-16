@@ -7,8 +7,12 @@
 <hibernate-mapping package="com.sap.model.bo">
 
      <class name="User" table="T_USER" >   
-        <id name="userId" column="USERID"  type="string" >
-            <generator class="assigned"/>
+        <id
+          name="userId"
+          type="java.lang.Integer"
+          column="userId"
+         >
+        <generator class="native" />
         </id>
         <property name="userName" type="string" />
         <property name="age" type="string" />

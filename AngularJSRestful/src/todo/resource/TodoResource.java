@@ -47,34 +47,7 @@ public class TodoResource {
 	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-    public Todo getTodos(Todo todo) {
-		SapSystem sapSystem = SapUtilities.getDefTestSystem();
-    	Object[] obj = SapUtilities.getJCoFunction(sapSystem,"BAPI_COMPANYCODE_GETLIST");
-    	Connection connect = (Connection)obj[0];
-    	JCoFunction function = (JCoFunction)obj[1];
-    	
-    	JCoTable returnStructure = function.getTableParameterList().getTable("COMPANYCODE_LIST"); 
-    	
-		try {
-			connect.executeNTX(function);
-		} catch (JCoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-	    for (int i = 0; i < returnStructure.getNumRows(); i++){ 
-	    	 returnStructure.setRow(i); 
-	    	 String COMP_CODE = returnStructure.getString("COMP_CODE");
-	    	 String COMP_NAME = returnStructure.getString("COMP_NAME");
-	    	 
-	    	 if (COMP_CODE.equals("TW01")) System.out.println(COMP_CODE +"   " + COMP_NAME); 
-	    	 if (COMP_CODE.equals("CN01")) System.out.println(COMP_CODE +"   " + COMP_NAME); 
-	    	 if (COMP_CODE.equals("CN02")) System.out.println(COMP_CODE +"   " + COMP_NAME); 
-	    	 if (COMP_CODE.equals("CN03")) System.out.println(COMP_CODE +"   " + COMP_NAME); 
-	    	 if (COMP_CODE.equals("CN04")) System.out.println(COMP_CODE +"   " + COMP_NAME); 
-	    }
-		
+    public Todo getTodos(Todo todo) {		
 		return TodoDao.addTodo(todo);
     }
 	
