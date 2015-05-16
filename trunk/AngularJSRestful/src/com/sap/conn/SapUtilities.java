@@ -9,7 +9,7 @@ import com.sap.conn.jco.JCoTable;
 
 public class SapUtilities {
 	public static SapSystem getDefTestSystem(){
-		return new SapSystem("DEV", "192.168.1.105", "700","00", "IT02", "d963852741","ZF","/H/saprouter2.swancor.com/H/");
+		return new SapSystem("DEV", "192.168.1.105", "710","00", "IT02", "d5379843","ZF","/H/saprouter2.swancor.com/H/");
 	}
 	public static SapSystem getLocalDefTestSystem(){
 		return new SapSystem("DEV", "192.168.1.105", "710","00", "NW431", "d963852741","ZF");
