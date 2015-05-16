@@ -42,11 +42,11 @@ public class UserServiceImpl implements UserService {
 	}
 	//=========================================================================================
 	public List queryForListBySQL(String sql) {
-		return null;//jdbcTemplate.queryForList(sql);
+		return jdbcTemplate.queryForList(sql);
 	}
 	
 	public int getObjectQty(final String HQL) {
-		List as = null;//(List) hibernateTemplate.find(HQL);
+		List as = (List) hibernateTemplate.find(HQL);
 		return as.size();
 	}
 	
