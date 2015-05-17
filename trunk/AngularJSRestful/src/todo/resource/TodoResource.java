@@ -34,7 +34,7 @@ public class TodoResource {
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Todo> getTodos() {
-		//System.out.println("1234!!");
+
 		return TodoDao.queryAll();
     }
 	

@@ -59,6 +59,7 @@ public class TodoDao {
 	}
 
 	public static void updateTodo(Todo todo) {
+		
 		Todo target = getTodo(todo.getId());
 		target.setName(todo.getName());
 		target.setOwner(todo.getOwner());
